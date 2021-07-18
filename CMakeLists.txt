@@ -6,15 +6,15 @@ set(LIBCEC_VERSION_MINOR 0)
 set(LIBCEC_VERSION_PATCH 2)
 
 # cec-client
-add_subdirectory(src/cec-client)
-add_dependencies(cec-client cec)
+#add_subdirectory(src/cec-client)
+#add_dependencies(cec-client cec)
 
 # cecc-client
-add_subdirectory(src/cecc-client)
-add_dependencies(cecc-client cec)
+#add_subdirectory(src/cecc-client)
+#add_dependencies(cecc-client cec)
 
 # pyCecClient
-add_subdirectory(src/pyCecClient)
+#add_subdirectory(src/pyCecClient)
 
 # libCEC
 add_subdirectory(src/libcec)

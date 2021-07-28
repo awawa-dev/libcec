@@ -17,9 +17,6 @@
 #       HAVE_DRM_EDID_PARSER      ON if DRM EDID parsing is supported
 #
 
-set(RPI_LIB_DIR     "" CACHE STRING "Path to Raspberry Pi libraries")
-set(RPI_INCLUDE_DIR "" CACHE STRING "Path to Raspberry Pi headers")
-
 set(PLATFORM_LIBREQUIRES "")
 
 include(CheckFunctionExists)
@@ -45,6 +42,9 @@ IF (EXISTS "/opt/vc/lib" AND EXISTS "/opt/vc/include")
 elseif (EXISTS "/usr/lib/aarch64-linux-gnu" AND EXISTS "/usr/include" )
 	set(RPI_LIB_DIR     "/usr/lib/aarch64-linux-gnu" CACHE STRING "Path to Raspberry Pi libraries (x64)")
 	set(RPI_INCLUDE_DIR "/usr/include" CACHE STRING "Path to Raspberry Pi headers (x64)")
+else()
+	set(RPI_LIB_DIR     "" CACHE STRING "Path to Raspberry Pi libraries")
+	set(RPI_INCLUDE_DIR "" CACHE STRING "Path to Raspberry Pi headers")
 endif()
 
 if(WIN32)

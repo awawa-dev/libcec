@@ -177,7 +177,7 @@ int8_t CAdapterFactory::DetectAdapters(cec_adapter_descriptor *deviceList, uint8
   return iAdaptersFound;
 }
 
-IAdapterCommunication *CAdapterFactory::GetInstance(const char *strPort, uint16_t iBaudRate)
+IAdapterCommunication *CAdapterFactory::GetInstance(const char *strPort, __attribute__((unused)) uint16_t iBaudRate)
 {
 #if defined(HAVE_TDA995X_API)
   if (!strcmp(strPort, CEC_TDA995x_VIRTUAL_COM))
